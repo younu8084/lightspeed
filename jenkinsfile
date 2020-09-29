@@ -5,7 +5,7 @@
      
       stage('Run sh file') {
         steps{
-        sh(' ./ /var/lib/jenkins/workspace/sample/entrypoint.sh')
+        sh(' ./  var/lib/jenkins/workspace/sample/entrypoint.sh')
         }
       }
     }
