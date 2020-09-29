@@ -3,9 +3,8 @@
     options { timeout(time: 20, unit: 'MINUTES') }
     stages {
      
-      stage('Run .sh') {
+      stage('Run sh file') {
         steps{
-        echo "run entrypoint script"
         ./entrypoint.sh
         }
       }
