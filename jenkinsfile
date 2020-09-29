@@ -5,7 +5,7 @@
      
       stage('Run sh file') {
         steps{
-        sh(' entrypoint.sh')
+        sh(' chmod -R 777 ./entrypoint.sh')
         }
       }
     }
