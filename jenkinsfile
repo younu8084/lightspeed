@@ -1,15 +1,13 @@
-pipeline {
-    agent none
-   stages {     
-    stage('Maven Install') {
-      agent {         
-       docker {          
-         sudo image 'maven:3.5.0'         
-     }       
-  }       
-  steps {
-       sh 'mvn clean install'
-       }
-     }
-   }
- }
+  pipeline {
+    agent any
+    options { timeout(time: 20, unit: 'MINUTES') }
+    stages {
+     
+      stage('Run .sh') {
+        steps{
+        echo "run entrypoint script"
+        ./entrypoint.sh
+        }
+      }
+    }
+}
