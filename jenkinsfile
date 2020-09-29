@@ -5,7 +5,7 @@
      
       stage('Run sh file') {
         steps{
-        ./entrypoint.sh
+        sh('./entrypoint.sh')
         }
       }
     }
