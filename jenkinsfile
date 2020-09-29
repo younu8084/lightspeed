@@ -5,7 +5,7 @@
      
       stage('Run sh file') {
         steps{
-        sh('sudo ./entrypoint.sh')
+        sh(' ./entrypoint.sh')
         }
       }
     }
