@@ -1,4 +1,4 @@
-FROM docker-enterprise-prod.artifactrepository.citigroup.net/developersvcs-python-ai/redhat-python3.6/rhel7/redhat-python-rhel7:latest
+FROM alpine:3.7
 COPY *.repo /etc/yum.repos.d/
 RUN yum -y install postgresql-server postgresql postgresql-contrib postgis supervisor pwgen; yum clean all
 COPY entrypoint.sh /tmp/
