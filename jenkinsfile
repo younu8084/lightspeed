@@ -1,12 +1,14 @@
   pipeline {
     agent any
-    options { timeout(time: 20, unit: 'MINUTES') }
-    stages {
+    stages{
+   
+      stage('run dockerfile')
+            {
+              steps{
+               sh ' docker build -t postgres'
+              }
+            }
+            }
+           
      
-      stage('Run sh file') {
-        steps{
-        sh(' ./  var/lib/jenkins/workspace/sample/entrypoint.sh')
-        }
-      }
-    }
-}
+  }
