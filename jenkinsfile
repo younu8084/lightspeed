@@ -5,7 +5,7 @@
       stage('run dockerfile')
             {
               steps{
-               sh ' docker build '
+               sh ' docker build -t postgres .'
               }
             }
             }
